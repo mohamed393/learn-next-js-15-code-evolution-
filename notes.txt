@@ -1,12 +1,9 @@
-(Server Components)
--By default ,Next.js treats all components as Server Components
--These components can perform server-side tasks like reading files or
- fetching data direct from BD without external endpoint
- -The trade off is that they can't use React hooks or handle user interactions
- (Client Components)
- -To create a Client component ,
- you'll need to add the 'use client' directive at the top of your component file
- -------------------------------
- the difference is
- -Work with server components that wait for certain operations to complete before rendering content
- -Use client components to take advantage of hooks from the routing module
+(Routing)
+-Next.js has a file system based routing system
+(Routing conventions )
+1- All routes must live inside the app folder
+2- Route files must be named either page.js or page.tsx
+3- Each folder represents a segment of the URL path
+when those conventions are followed ,the file automatically becomes available as a route
+
+-square brackets folder corresponds to a dynamic segment
