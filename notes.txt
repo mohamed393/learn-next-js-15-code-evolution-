@@ -1,12 +1,4 @@
-(Server Components)
--By default ,Next.js treats all components as Server Components
--These components can perform server-side tasks like reading files or
- fetching data direct from BD without external endpoint
- -The trade off is that they can't use React hooks or handle user interactions
- (Client Components)
- -To create a Client component ,
- you'll need to add the 'use client' directive at the top of your component file
- -------------------------------
- the difference is
- -Work with server components that wait for certain operations to complete before rendering content
- -Use client components to take advantage of hooks from the routing module
+the goal of this lecture is to make multiple root layout
+for example if you need a sidebar layout for the app,
+ and you couldn't view sidebar without login
+so you must make one for sidebar and one for login page
