@@ -7,3 +7,40 @@
 when those conventions are followed ,the file automatically becomes available as a route
 
 -square brackets folder corresponds to a dynamic segment
+--------------------------------------------------------------------
+(Catch all segment) meaning lets one route match multiple path parts
+example
+app/shop/[...slug]/page.tsx  This matches:
+                             /shop/shoes
+                             /shop/shoes/nike
+                             /shop/shoes/nike/air-max
+params.slug will be an array like ['shoes', 'nike', 'air-max'].
+--if you increase [] as [[...slug]], which additionally matches the base route itself, like /shop.
+
+A quick rule of thumb:
+
+[id] → one segment
+
+[...slug] → one or more segments
+
+[[...slug]] → zero or more segments
+--------------------------------------------------------------------
+for not found page make not-found.tsx under app folder this will work globally for the app
+and if you need to make a custom one ,
+go under each directory and add the same name and it will override
+---------------------------------------------------------------------
+private folders are folders whose names start with an underscore, like _components or _lib.
+Next.js treats them as implementation details and excludes them from the routing system,
+A common pattern is:
+
+app/
+  dashboard/
+    page.tsx
+    _components/
+    _lib/
+
+---------------------------------------------------------------------------------
+Route Groups
+next js act with directories as paths
+and if you just need to group some directories under folder with excluding this folder from URL path add ()
+as exist in auth we call login direct without () because of (auth)
