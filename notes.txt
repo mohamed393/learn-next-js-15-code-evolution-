@@ -2,3 +2,24 @@ the goal of this lecture is to make multiple root layout
 for example if you need a sidebar layout for the app,
  and you couldn't view sidebar without login
 so you must make one for sidebar and one for login page
+
+----------------------------------------
+the usage of replace in link component ar next.js
+Use replace when you do not want users to return to the previous URL via Back, such as:
+login or logout redirects
+ex
+<Link href="/about" replace>
+      About us
+    </Link>
+replace on the Link component means navigate without
+ adding a new entry to the browser history stack.
+ ---------------------------------------
+layout.tsx vs template.tsx
+A good mental model is:
+layout = persistent shell
+template = fresh wrapper each navigation
+So the practical rule is: default to layout,
+and only use template when you specifically need a reset/remount behavior
+
+-------------------------------------------
+the loading states appears when navigating not when pending request api
